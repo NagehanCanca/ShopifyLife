@@ -1,0 +1,10 @@
+﻿@model List<ShopifyLite.Models.ShoppingList>
+
+<h2>Your Shopping Lists</h2>
+
+<ul>
+    @foreach (var list in Model)
+    {
+        <li><a asp-action="ItemList" asp-controller="ShoppingList" asp-route-id="@list.Id">@list.ListName</a></li>
+    }
+</ul>

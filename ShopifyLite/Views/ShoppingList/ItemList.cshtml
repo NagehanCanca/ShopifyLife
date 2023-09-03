@@ -1,0 +1,41 @@
+﻿@model ShopifyLite.ViewModels.AddItemViewModel
+
+<h2>Add Item to @Model.ListName</h2>
+
+<form asp-action="AddItem" asp-controller="ShoppingList" method="post">
+    <input type="hidden" asp-for="ListId" />
+    <div class="form-group">
+        <label asp-for="ItemName"></label>
+        <input asp-for="ItemName" class="form-control" />
+        <span asp-validation-for="ItemName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Quantity"></label>
+        <input asp-for="Quantity" class="form-control" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Item</button>
+</form>
+
+<h2>@Model.ListName Items</h2>
+
+<ul>
+    @foreach (var item in Model.Items)
+    {
+        <li>
+            @if (!item.IsBought)
+            {
+                <form asp-action="MarkItemAsBought" asp-controller="ShoppingList" method="post">
+                    <input type="hidden" name="itemId" value="@item.Id" />
+                    <button type="submit" class="btn btn-success btn-sm">Bought</button>
+                </form>
+            }
+            @item.ItemName - Quantity: @item.Quantity
+            <form asp-action="RemoveItem" asp-controller="ShoppingList" method="post">
+                <input type="hidden" name="listId" value="@Model.ListId" />
+                <input type="hidden" name="itemId" value="@item.Id" />
+                <button type="submit" class="btn btn-danger btn-sm">Remove</button>
+            </form>
+        </li>
+    }
+</ul>

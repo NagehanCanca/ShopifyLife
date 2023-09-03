@@ -1,0 +1,6 @@
+C:\Users\canca\source\repos\ShopifyLite\obj\Debug\net7.0\ShopifyLite.csproj.AssemblyReference.cache
+C:\Users\canca\source\repos\ShopifyLite\obj\Debug\net7.0\ShopifyLite.AssemblyInfoInputs.cache
+C:\Users\canca\source\repos\ShopifyLite\obj\Debug\net7.0\ShopifyLite.AssemblyInfo.cs
+C:\Users\canca\source\repos\ShopifyLite\obj\Debug\net7.0\ShopifyLite.csproj.CoreCompileInputs.cache
+C:\Users\canca\source\repos\ShopifyLite\obj\Debug\net7.0\ShopifyLite.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\canca\source\repos\ShopifyLite\obj\Debug\net7.0\ShopifyLite.MvcApplicationPartsAssemblyInfo.cache
